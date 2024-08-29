@@ -1,0 +1,79 @@
+.card{
+    margin-left: 30%;
+    margin-right: 30%;  
+    align-items: center;
+ 
+}
+.h3{
+    color: white;
+    margin-top: 2%;
+   align-items: center;
+   font-size: large;
+}
+.email{
+    margin-top: 4%;
+   font-size: larger;
+}
+
+.Password{
+    margin-top: 4%;
+   font-size: larger;
+}
+.btn{
+    margin-top: 4%;
+    
+}
+.log{
+    background-color: cornflowerblue;
+color: white;
+width: 25%;
+font-size: larger;
+}
+
+.reg{
+    background-color: rgb(52, 195, 223);
+color: white;
+width: 80%;
+font-size: larger;
+}
+
+
+.card-title{
+    background-color: cornflowerblue;
+    height: 60px;
+   
+}
+.p{
+    text-align: end;
+}
+.pr{
+    margin-right: 2%;
+}
+.header{
+    text-align: center;
+   
+}
+
+#column{
+   align-items: start;
+   text-align: start;
+}
+
+#name{
+    align-items: end;
+    border: red;
+    text-align: end;
+    
+}
+.row{
+    border: red;
+}
+.alform{
+    align-items: center;
+    text-align: center;
+}
+
+.label{
+color: rgb(52, 52, 154);
+}
+

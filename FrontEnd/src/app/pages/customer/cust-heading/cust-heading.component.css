@@ -1,0 +1,51 @@
+#card{
+    margin-top: 1%;
+   height: 7%;
+   background-color: rgb(169, 246, 246);
+}
+
+.col{
+    align-items: center;
+    text-align: center;
+}
+
+#one{
+    margin-left: 4%;
+    margin-top: 3%;
+}
+
+#two{
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-top: 3%;
+}
+#icon{
+    height: 50px;
+}
+#primary{
+    background-color: rgb(150, 210, 240);
+    color: rgb(36, 27, 156);
+    height: 70px;
+    align-items: center;
+    text-align: centerr;
+}
+
+#savings{
+    background-color:rgb(165, 227, 165);
+    color: rgb(9, 118, 9);
+    height: 70px;
+    align-items: center;
+    text-align: centerr;
+}
+/* #details{
+    color: rgb(53, 133, 194);
+} */
+
+
+#money{
+    text-align: end;
+    align-items: end;
+}
+#divs{
+    height: 40%;
+}

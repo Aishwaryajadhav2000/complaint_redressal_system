@@ -1,0 +1,35 @@
+<div style="margin-left: 3%;">
+    <button><a href="adminhome">Back</a></button>
+</div>
+<hr>
+<div class="page">
+    <div class="heading">
+        <p>Complaints</p>
+    </div>
+</div>
+<br>
+<table style="width:100%;  border:1px solid black">
+    <tr style="width:100%;  border:1px solid black">
+        <th>Complaint Id</th>
+        <th>User Name</th>
+        <th>Complaint</th>
+        <th>Action Taken By</th>
+        <th>Status?</th>
+        <th>Customer Feedback</th>
+        <th>View Complaint</th>
+       
+       
+    </tr>
+    <tr style="width:100%;  border:1px solid black" *ngFor="let complaints of complaints">
+        <td>{{complaints.complaintid}}</td>
+        <td>{{complaints.username}}</td>
+        <td>{{complaints.complaintdescription}}</td>
+        <td><p *ngIf="complaints.complaintassign == null">Not assign to any</p>engr.{{complaints.complaintassign}}</td>
+        <td><p *ngIf="complaints.complaintstatus == null">not submitted</p>{{complaints.complaintstatus}}</td>
+        <td><p *ngIf="complaints.customerfeedback == null">Not submited</p>{{complaints.customerfeedback}}</td>
+        <td><button>View</button></td>
+       
+    </tr>
+</table>
+
+<br>

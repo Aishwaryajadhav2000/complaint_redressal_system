@@ -1,0 +1,114 @@
+<app-cust-heading></app-cust-heading>
+<br>
+
+<div>
+    <br>
+    <!-- <form  > -->
+
+    <div class="card" id=card>
+        <div class="card-body">
+            <div class="card-header">Make Complaints Here
+                <p [(ngModel)]="complaint.username" [ngModelOptions]="{standalone : true}">
+                    {{usernames}}
+                </p>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-6 card-title">
+                    <input placeholder=" title of the complaint" [(ngModel)]="complaint.complainttitle"
+                        [ngModelOptions]="{standalone : true}">
+                </div>
+                <div class=" col-6 card-title">
+                    <input placeholder=" type of the complaint" [(ngModel)]="complaint.complainttype"
+                        [ngModelOptions]="{standalone : true}">
+                </div>
+            </div>
+
+            <div class="card-text">
+                <input placeholder="add your complaint in detail here" id="card-text"
+                    [(ngModel)]="complaint.complaintdescription" [ngModelOptions]="{standalone : true}">
+            </div>
+            <br>
+            <div>
+                <label>Priority</label>
+                <select [(ngModel)]="complaint.complaintpriority" [ngModelOptions]="{standalone : true}">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <br>
+            <div style="text-align: center;">
+                <button (click)=submit()>Submit Complaint</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- </form> -->
+</div>
+<br><br>
+<div>
+    <h2 style="text-align: center; color: brown;"> Your Complaints
+    </h2>
+    <br>
+    <div>
+        <div class="row mainrow" >
+          
+            <div class="col-4" *ngFor="let complaint of complaints" style="background-color: rgb(241, 162, 162); margin-bottom: 2%;">
+                <br>
+                <div class="card" >
+                    <div class="card-body">
+                        <div class="card-header">
+                            {{ complaint.complainttitle}}
+                        </div>
+                        <div class="card-header">
+                            {{complaint.complainttype}}
+                        </div>
+
+                        <div class="card-text">
+                            Priority - {{complaint.complaintpriority}}
+                        </div>
+                        <hr>
+                        <div class="card-subtitle">
+                            {{ complaint.complaintdescription }}
+                        </div>
+
+                        <div class="card-footer">
+                            <div *ngIf="complaint.complaintassign == null">
+                                Complaint is not assign to any engineer
+                            </div>
+
+                            <div *ngIf="complaint.complaintassign != null">
+                                complaint assign to er. {{complaint.complaintassign}}
+                            </div>
+                        </div>
+
+
+                        <div class="card-footer">
+                            <div *ngIf="complaint.complaintstatus == null">
+                                Status - not selected by engineer
+                            </div>
+                            <div *ngIf="complaint.complaintstatus != null">
+                                Status - {{complaint.complaintstatus}}
+                            </div>
+
+                        </div>
+
+
+
+                        <br>
+
+                        <button (click)="submitfeedback(complaint.complaintid)">Submit Feedback</button>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

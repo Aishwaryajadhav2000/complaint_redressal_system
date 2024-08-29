@@ -1,0 +1,39 @@
+<hr>
+<div style="margin-left: 3%;">
+    <button><a href="adminhome">Back</a></button>
+</div>
+
+<div class="page">
+    <div class="heading">
+        <p></p>
+    </div>
+</div>
+<br>
+<div style="margin-left: 1%; margin-right: 1%;">
+    <table style="width:100%;  border:1px solid black">
+        <tr style="width:100%;  border:1px solid black">
+            <th>User Id</th>
+            <th>User Name</th>
+            <th>Address</th>
+            <th>Contact No</th>
+            <th>Emailid</th>
+            <th>Role</th>
+            <!-- <th>View Complaints</th> -->
+           
+           
+        </tr>
+        <tr style="width:100%;  border:1px solid black" *ngFor="let allusers of allusers">
+            <td>{{allusers.userid}}</td>
+            <td>{{allusers.username}}</td>
+            <td>{{allusers.address}}</td>
+            <td>{{allusers.contactno}}</td>
+            <td>{{allusers.useremailid}}</td>
+            <td>{{allusers.role}}</td>
+            <!-- <td><button>View</button></td> -->
+           
+        </tr>
+    </table>
+</div>
+
+
+<br>

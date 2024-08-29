@@ -1,0 +1,142 @@
+<div class="username">
+    Hello engr. {{username}}
+</div>
+
+<br>
+<div style="text-align: center;">
+    <h3>Here are some Complaints assign to You</h3>
+</div>
+<br>
+<!-- <content>
+    <div class="row">
+        <div class="col-6">
+            <div class="card" *ngFor="let complaints of complaint">
+            <div class="card">
+
+                <div class="card-body">
+                    <div card-header>
+                        complainttitle
+                    </div>
+                    <hr>
+                    <div class="card-title">
+                        Complaint Assign By username
+                    </div>
+
+                    <div class="card-subtitle">
+                        complainttype
+                    </div>
+
+                    <div>
+                        complaintdescription
+                    </div>
+                    <div>
+                        complaintpriority
+                    </div>
+
+                    <div [formGroup]="statusform">
+                        Select Complaint Status
+                        <select formControlName="selectstatus">
+                            <option>To do</option>
+                            <option>In Progress</option>
+                            <option>Completed</option>
+                        </select>
+                        <div>
+                            <input formControlName="selectstatus">
+                        </div>
+                        <br>
+                        <div>
+
+                            <button (click)="submitstatus(complaint.complaintid)">Submit Status</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</content> -->
+
+<content>
+    <div class="row">
+        <div class="col-6" *ngFor="let complaints of complaint">
+            <div class="card" >
+                <div class="card-body">
+                    <div class="form">
+                        <div class="card-title">
+                            <div class="row">
+                                <div class="col-6">
+                                    Title of the Complaint
+                                </div>
+                                <div class="col-6">
+                                    Title
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="row">
+                                <div class="col-6">
+                                    Description of the Complaint
+                                </div>
+                                <div class="col-6">
+                                    Description
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div>
+                            <div class="row">
+                                <div class="col-6">
+                                    Priority Prioryty
+                                </div>
+                                <div class="col-6">
+                                    Type type
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div [formGroup]="statusform">
+                            <div class="row">
+                                <div class="col-6">
+                                    Select Status of the complaint
+                                    <select formControlName="selectstatus">
+                                        <option value="To Do">To do</option>
+                                        <option value="work in progress">Work in progress</option>
+                                        <option value="Completed">Completed</option>
+                                        <option value="None">None</option>
+                                    </select>
+                                </div>
+                                <div class="col-6">
+                                    <button (click)="submitstatus(complaints.complaintid)">Submit Status</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div [formGroup]="statusform">
+                            Select Complaint Status
+                            <select formControlName="selectstatus">
+                                <option>To do</option>
+                                <option>In Progress</option>
+                                <option>Completed</option>
+                            </select>
+                            <div>
+                                <input formControlName="selectstatus">
+                            </div>
+                            <br>
+                            <div>
+    
+                                <button (click)="submitstatus(complaint.complaintid)">Submit Status</button>
+    
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</content>

@@ -1,0 +1,63 @@
+<div style="text-align: center;">
+    <h2>Your Complaints</h2>
+</div>
+<br>
+<div style="text-align: center; color: brown; font-weight: bolder;">
+    {{complaintfeed.username}} You can submit your feedback here</div>
+
+
+<!-- <div [(ngModel)]="complaintfeed.username" [ngModelOptions]="{standalone:true}"></div> -->
+<br>
+
+    <div class="row mainrow">
+        <div class="col-6">
+            <div class="card"  >
+                <div class="card-body">
+                    <div class="card-header">
+                      Title -  {{complaint.complainttitle}}
+                    </div>
+                    <div class="card-header">
+                      Type of the complaint -  {{complaint.complainttype}}
+                    </div>
+
+                    <div class="card-subtitle">
+                        {{complaint.complaintdescription}}
+                    </div>
+
+                    <div class="card-text">
+                        {{complaint.complaintpriority}}
+                    </div>
+
+                    <div class="card-footer">
+                        complaint assign to - engr{{complaint.complaintassign}}
+                    </div>
+                    <div class="card-footer">
+                        complaint status - {{complaint.complaintstatus}}
+                    </div>
+
+                    <div class="card-footer" >
+                        <div >
+                            <!-- <input placeholder="add your feedback" [(ngModel)]="complaintfeed.complaintassign" [ngModelOptions]="{standalone:true}">
+
+                            <input placeholder="add your feedback" [(ngModel)]="complaintfeed.complaintstatus" [ngModelOptions]="{standalone:true}"> -->
+
+                            <!-- <input placeholder="add your feedback" value="feedback" formControlName="customer_feedback"> -->
+                            <input style="width: 90%; text-align: center;" placeholder="add your feedback here" [(ngModel)]="complaintfeed.customerfeedback" [ngModelOptions]="{standalone:true}">
+
+                        </div>
+
+
+                        <br>
+                        <button (click)="submit()">Submit Feedback</button>
+
+
+                    </div>
+
+                    
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+

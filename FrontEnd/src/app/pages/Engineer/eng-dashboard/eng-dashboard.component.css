@@ -1,0 +1,11 @@
+.username{
+    margin-left: 5%;
+    margin-top: 3%;
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(80, 27, 202);
+}
+.row{
+    margin-left: 2%;
+    margin-right: 2%;
+}

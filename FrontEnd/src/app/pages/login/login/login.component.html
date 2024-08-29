@@ -1,0 +1,48 @@
+
+<!-- <header s class="header">
+    <h1><b>Please Sign in</b></h1>
+</header> -->
+
+
+<content style="text-align: center;">
+
+    <div class="card">
+
+        <div class="card-title">
+            <h1 class="h3">Please sign in</h1>
+        </div>
+        <form [formGroup]="login" (ngSubmit)="submit()">
+            <div class="email">
+                <label><b>Select Role:</b> </label>
+                <select name="Role" class="input" formControlName="role">
+                    <option value="Admin">Admin</option>
+                    <option value="Customer">Customer</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Engineer">Engineer</option>
+                </select>
+            </div>
+            <div class="email">
+               
+                <input placeholder="Enter Your Username" class="input" formControlName="username">
+            </div>
+            <div class="Password">
+               
+                <input placeholder="Enter Your Password" class="input" formControlName="password">
+            </div>
+           
+                <button class="log" type="submit">Sign in</button>
+         
+            <hr>
+         
+                <button class="reg" (click)="signUp()">Sign up !</button>
+           
+        </form>
+
+
+
+    
+       
+
+    </div>
+
+</content>

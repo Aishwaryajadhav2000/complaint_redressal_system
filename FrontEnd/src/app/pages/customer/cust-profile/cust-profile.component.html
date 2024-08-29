@@ -1,0 +1,125 @@
+<header class="header">
+    <!-- <h6 style="text-align: left; margin-left: 3%; color: blueviolet;">
+        <small class="button"><a href="adminhome">Back</a></small>
+    </h6>
+    <h4 class="label"><b><i>Add Employees</i></b></h4> -->
+
+    <div class="row">
+        <div class="col-1">
+            <h6 style="text-align: left; margin-left: 3%; color: blueviolet;">
+             <a href="custdashboard">Back</a>
+            </h6>
+        </div>
+       
+    </div>
+</header>
+<hr>
+
+<content style="text-align: center;">
+
+    <div class="card">
+
+
+        <form >
+
+            <div class="form-row" id="alform">
+                <div class="col-md-12 mb-10">
+                    <label class="label"><b>Your Role</b></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <!-- <span class="input-group-text" id="inputGroupPrepend3">@</span> -->
+                        </div>
+                        <select class="form-control" placeholder="select Role" [disabled]="true">
+                            <option >Customer</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-12 mb-10">
+                    <label class="label"><b>Full Name</b></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <!-- <span class="input-group-text" id="inputGroupPrepend3">@</span> -->
+                        </div>
+                        <input type="text" class="form-control" placeholder="{{user.fullname}}" formControlName="firstname">
+
+                    </div>
+                </div>
+
+               <br>
+
+                <div class="col-md-12 mb-10">
+                    <label class="label"><b>Phone</b></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <!-- <span class="input-group-text" id="inputGroupPrepend3">@</span> -->
+                        </div>
+                        <input type="text" class="form-control" placeholder="{{user.contactno}}" formControlName="contactno">
+
+                    </div>
+                </div>
+                <br>
+
+                <div class="col-md-12 mb-10">
+                    <label class="label"><b> Email</b></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <!-- <span class="input-group-text" id="inputGroupPrepend3">@</span> -->
+                        </div>
+                        <input type="text" class="form-control" placeholder="{{user.useremailid}}" formControlName="useremailid">
+
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-12 mb-10">
+                    <label class="label"><b> Address</b></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <!-- <span class="input-group-text" id="inputGroupPrepend3">@</span> -->
+                        </div>
+                        <input type="text" class="form-control"placeholder="{{user.address}}" formControlName="useraddress">
+
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-12 mb-10">
+                    <label class="label"><b>User Name</b></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <!-- <span class="input-group-text" id="inputGroupPrepend3">@</span> -->
+                        </div>
+                        <input type="text" class="form-control" placeholder="{{user.username}}" formControlName="username">
+
+                    </div>
+                </div>
+                <br>
+                <div class="col-md-12 mb-10">
+                    <label class="label"><b>Password</b></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <!-- <span class="input-group-text" id="inputGroupPrepend3">@</span> -->
+                        </div>
+                        <input type="text" class="form-control" placeholder="{{user.password}}" formControlName="password">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <button class="reg" type="submit" (click)="submit()">Update Your Profile</button>
+
+
+        </form>
+
+
+
+
+
+
+    </div>
+
+</content>
+
+

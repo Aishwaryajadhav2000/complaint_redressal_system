@@ -1,0 +1,45 @@
+<a href="">Logout</a>
+<br>
+<div style="text-align: center; color: brown;">
+    <h2 >Hello manager {{usernames}}</h2>
+
+</div>
+
+<hr>
+<div style="text-align: center; color: rgb(72, 132, 243);">
+    <h3>Assign Complaints to Engineers</h3>
+</div>
+<content>
+    <div style="margin-left: 1%; margin-right: 1%;">
+        <table style="width:100%;  border:1px solid black">
+            <tr style="width:100%;  border:1px solid black">
+                <th>User Id</th>
+                <th>User Name</th>
+                <th>Complaint</th>
+                <th>Status</th>
+                <th>Assign to</th>
+                <th></th>
+                
+            </tr>
+
+            <tr style="width:100%;  border:1px solid black" [formGroup]="assignform" *ngFor="let complaints of complaints">
+                <td>{{complaints.complaintid}}</td>
+                <td>{{complaints.username}}</td>
+                <td>{{complaints.complaintdescription}}</td>
+                <td>{{complaints.complaintstatus}}</td>
+
+                <td>
+
+                    <select formControlName="complaintassign" >
+                        <!-- <option value="">{{engineerlist.username}}</option> -->
+                        <option *ngFor=" let engineerlist of engineerlist">{{engineerlist.username}}</option>
+
+                    </select>
+
+                </td>
+                <td><button (click)="assign(complaints.complaintid)">Assign</button></td>
+               
+            </tr>
+        </table>
+    </div>
+</content>
